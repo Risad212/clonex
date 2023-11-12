@@ -1,1 +1,0 @@
-<h2>Componion</h2>
