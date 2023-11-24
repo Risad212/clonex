@@ -1,66 +1,85 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --primary-color: #089c7e;
+  --primary-color: #089c7e;
 }
 
-
 /*------------------------------------*/
+main{
+  display: flex;
+}
+
+/*-----------------------------------*/
 .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
-  
-  .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-  }
-   
-  .sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-  
-  div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-  }
-  
-  @media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-  }
-  
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
-  }
+  margin: 0;
+  padding: 0;
+  max-width: 12%;
+  background-color: #f1f1f1;
+  height: 100vh;
+  overflow: auto;
+  width: 100%;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/*--------------------------*/
+.content {
+  padding: 16px;
+  max-width: 88%;
+  width: 100%;
+}
+
+.component {
+  background: #ddd;
+  padding: 18px;
+}
+
+.component-title{
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.code-area{
+  margin-top: 15px;
+}
+
+.html-label{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.code-block{
+  border-radius: 8px;
+  background: #555;
+  padding: 10px;
+  color: #fff;
+  text-align: left;
+}
